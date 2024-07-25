@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>header</title>
+</head>
+<body>
+    <header>
+        <div class="px-3 py-3 border-bottom gradient-background">
+          <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+              <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"> 
+                <img src="icons/VSA logo.png" alt="VSA logo" class="bi me-2" height="70" width="100" role="img" aria-label="Vaibhav Skating Academy">VAIBHAV SKATING ACADEMY
+              </a>
+    
+              <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                <li>
+                  <a href="/" class="nav-link text-white">
+                    <img class="bi d-block mb-1 Home" width="24" height="24" src="icons/house-door-fill.svg" alt="House">Home
+                  </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">
+                      <img src="icons/roller-skater.png" alt="Practice Session" class="bi d-block mb-1 mx-auto" width="24" height="24" >
+                      Sessions info
+                    </a>
+                  </li>
+                <li>
+                  <a href="/Cart" class="nav-link text-white">
+                    <img src="icons/cart-check-fill.svg"
+                    class="bi d-block mb-1" width="24" height="24" alt="Filled Cart">
+                    Cart
+                  </a>
+                </li>
+                <li>
+                  <a href="/Shop" class="nav-link text-white" target="_blank">
+                    <img src="icons/cart.svg" alt="Carts" class="bi d-block mb-1" width="24" height="24" >
+                    Shop
+                  </a>
+                </li>
+                <li>
+                  <a href="/Subscription" class="nav-link text-white">
+                    <img src="icons/subscription-fill.svg" alt="Carts" class="bi d-block mb-1 mx-auto" width="24" height="24" >
+                    Join us
+                  </a>
+                </li>
+                <li>
+                    <%if(Login){%>
+                        <div>
+                            <div class="dropdown">                            
+                                <a href="/" class="dropbtn nav-link text-white">
+                                    <img src="icons/person-circle.svg" alt="Login" class="bi d-block mb-1" width="24" height="24" ><%=Login%>
+                                </a>
+                                <div class="dropdown-content  nav-link text-white">
+                                    <a href="/Profile">Profile</a>
+                                    <a href="#">Change Password</a>
+                                    <a href="/Logout">Log out</a>
+                                </div>
+                            
+                            </div>
+
+                <%}else{%>
+                  <a href="/newLogin" class="nav-link text-white">
+                    <img src="icons/person-circle.svg" alt="Login" class="bi d-block mb-1" width="24" height="24" >
+                    Login
+                  </a>
+                  <%}%>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header> 
+</body>
+</html>
